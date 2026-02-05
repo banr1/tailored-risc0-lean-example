@@ -1,0 +1,17 @@
+{
+  "name": "tailored-risc0-lean-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.26.0",
+  "devDependencies": {
+    "@anthropic-ai/claude-code": "^2.1.31",
+    "prettier": "^3.8.1"
+  }
+}

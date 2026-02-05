@@ -1,0 +1,7 @@
+{
+	"language": "Japanese",
+	"plansDirectory": ".claude/plans",
+	"permissions": {
+		"defaultMode": "plan"
+	}
+}
