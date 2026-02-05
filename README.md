@@ -16,12 +16,12 @@ Lean 4 ──Lake──▶ C IR ──CMake──▶ RISC-V static lib ──Car
 
 ### ディレクトリ構成
 
-| ディレクトリ | 役割 |
-|-------------|------|
-| `guest/` | Lean 4 ソース。Lake でビルドして C IR を生成 |
+| ディレクトリ   | 役割                                                                      |
+| -------------- | ------------------------------------------------------------------------- |
+| `guest/`       | Lean 4 ソース。Lake でビルドして C IR を生成                              |
 | `guest_build/` | CMake プロジェクト。C IR を RISC-V 32bit 静的ライブラリにクロスコンパイル |
-| `methods/` | Rust ゲストクレート。FFI で Lean 静的ライブラリをリンクし ELF を生成 |
-| `host/` | Rust ホスト。ゲスト ELF をロードし zkVM で証明実行 |
+| `methods/`     | Rust ゲストクレート。FFI で Lean 静的ライブラリをリンクし ELF を生成      |
+| `host/`        | Rust ホスト。ゲスト ELF をロードし zkVM で証明実行                        |
 
 ### FFI 境界とデータフロー
 

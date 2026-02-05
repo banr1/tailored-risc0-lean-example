@@ -11,6 +11,7 @@ target/release/host 42  # 数値入力で実行（ホストがゲストを証明
 ```
 
 個別ステップ:
+
 ```bash
 cd guest && lake build              # Lean → C IR
 cd guest_build && just build        # CMake クロスコンパイル (RISC-V static lib)
@@ -19,10 +20,10 @@ cargo build --release               # Cargo リンク → ゲスト ELF + ホス
 
 ## 必須環境変数
 
-| 変数 | 説明 |
-|------|------|
-| `LEAN_RISC0_PATH` | Lean RISC0 ランタイムへのパス (通常 `~/.lean-risc0`) |
-| `RISC0_TOOLCHAIN_PATH` | RISC0 ツールチェーンへのパス |
+| 変数                   | 説明                                                 |
+| ---------------------- | ---------------------------------------------------- |
+| `LEAN_RISC0_PATH`      | Lean RISC0 ランタイムへのパス (通常 `~/.lean-risc0`) |
+| `RISC0_TOOLCHAIN_PATH` | RISC0 ツールチェーンへのパス                         |
 
 ## アーキテクチャ
 
@@ -34,12 +35,12 @@ Lean 4 ──Lake──▶ C IR ──CMake──▶ RISC-V static lib ──Car
 
 ### ディレクトリ構成
 
-| ディレクトリ | 役割 |
-|-------------|------|
-| `guest/` | Lean 4 ソース。Lake でビルドして C IR を生成 |
+| ディレクトリ   | 役割                                                                      |
+| -------------- | ------------------------------------------------------------------------- |
+| `guest/`       | Lean 4 ソース。Lake でビルドして C IR を生成                              |
 | `guest_build/` | CMake プロジェクト。C IR を RISC-V 32bit 静的ライブラリにクロスコンパイル |
-| `methods/` | Rust ゲストクレート。FFI で Lean 静的ライブラリをリンクし ELF を生成 |
-| `host/` | Rust ホスト。ゲスト ELF をロードし zkVM で証明実行 |
+| `methods/`     | Rust ゲストクレート。FFI で Lean 静的ライブラリをリンクし ELF を生成      |
+| `host/`        | Rust ホスト。ゲスト ELF をロードし zkVM で証明実行                        |
 
 ### FFI 境界とデータフロー
 

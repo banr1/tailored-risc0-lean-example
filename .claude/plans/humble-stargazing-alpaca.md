@@ -30,6 +30,7 @@ CLAUDE.md のアーキテクチャ図をベースに、以下を含む:
 ### 3. Getting Started
 
 段階的なセットアップ手順:
+
 1. 前提条件（Lean 4.22.0 via elan, CMake, Cargo）
 2. `just` インストール
 3. RISC0 ツールチェーンインストール（rzup → cpp, rust, r0vm）
